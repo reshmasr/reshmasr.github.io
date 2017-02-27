@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="http://demos.telerik.com/kendo-ui/donut-charts/index">
+        <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+        <title></title>
+        <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.226/styles/kendo.common-bootstrap.min.css" />
+        <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.226/styles/kendo.bootstrap.min.css" />
+
+        <script src="//kendo.cdn.telerik.com/2016.1.226/js/jquery.min.js"></script>
+        <script src="//kendo.cdn.telerik.com/2016.1.226/js/kendo.all.min.js"></script>
+    </head>
+    <body>
+        <div id="example">
+            <div class="demo-section k-content wide">
+                <div id="chart" style="background: center no-repeat url('../content/shared/styles/world-map.png');"></div>
+            </div>
+            <script>
+                function createChart() {
+                    $("#chart").kendoChart({
+                        theme: "uniform",
+                        title: {
+                            position: "bottom",
+                            text: "Takamol PMD"
+                        },
+                        legend: {
+                            visible: false
+                        },
+                        chartArea: {
+                            background: "#FFF",
+                            margin: 0
+                        },
+                        seriesDefaults: {
+                            spacing: 0,
+                            holeSize: 30,
+                            margin: 0,
+                            type: "donut",
+                            startAngle: 100,
+                            border: {
+                                width: 1,
+                                color: function (point) {
+                                    return point.series.color;
+                                }
+                            }
+                        },
+                        series: [{
+                                overlay: {
+                                    gradient: "none"
+                                },
+                                size: 20,
+                                name: "2012",
+                                data: [{
+                                        category: "",
+                                        value: 100,
+                                        color: "#EFEFEF"
+                                    }],
+                                labels: {
+                                    visible: false
+                                },
+                                tooltip: {
+                                    visible: false
+                                }
+                            }, {
+                                overlay: {
+                                    gradient: "none"
+                                },
+                                highlight: {
+                                    visible: false
+                                },
+                                size: 15,
+                                name: "2011",
+                                data: [{
+                                        category: "Asia",
+                                        value: 25,
+                                        color: "#E69100"
+                                    }, {
+                                        category: "Europe",
+                                        value: 75,
+                                        color: "#4A7E00"
+                                    }],
+                                labels: {
+                                    visible: false
+                                },
+                                tooltip: {
+                                    visible: true,
+                                    background: "black",
+                                    color: function (point) {
+                                        return point.series.color;
+                                    },
+                                    template: "#= category # (#= series.name #): #= value #%"
+                                }
+                            }, {
+                                overlay: {
+                                    gradient: "none"
+                                },
+                                highlight: {
+                                    visible: false
+                                },
+                                name: "2011",
+                                data: [{
+                                        category: "Asia",
+                                        value: 25,
+                                        color: "#FFA200"
+                                    }, {
+                                        category: "Europe",
+                                        value: 75,
+                                        color: "#518C00"
+                                    }],
+                                labels: {
+                                    visible: false
+                                },
+                                tooltip: {
+                                    color: function (point) {
+                                        return point.series.color;
+                                    },
+                                    background: "black",
+                                    visible: true,
+                                    template: "#= category # (#= series.name #): #= value #%"
+                                }
+                            }, {
+                                overlay: {
+                                    gradient: "none"
+                                },
+                                size: 30,
+                                name: "2012",
+                                data: [{
+                                        category: "",
+                                        value: 100,
+                                        color: "#EFEFEF"
+                                    }],
+                                labels: {
+                                    visible: false
+                                },
+                                tooltip: {
+                                    visible: false
+                                }
+                            }]
+                    });
+                }
+
+                $(document).ready(createChart);
+                $(document).bind("kendo:skinChange", createChart);
+                $(window).on("resize", function () {
+                    kendo.resize($(".demo-section"));
+                });
+            </script>
+        </div>
+
+
+    </body>
+</html>
