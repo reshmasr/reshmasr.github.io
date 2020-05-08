@@ -1,0 +1,146 @@
+:root {
+    --syntax_normal: #1b1e23;
+    --syntax_comment: #a9b0bc;
+    --syntax_number: #20a5ba;
+    --syntax_keyword: #c30771;
+    --syntax_atom: #10a778;
+    --syntax_string: #008ec4;
+    --syntax_error: #ffbedc;
+    --syntax_unknown_variable: #838383;
+    --syntax_known_variable: #005f87;
+    --syntax_matchbracket: #20bbfc;
+    --syntax_key: #6636b4;
+    --mono_fonts: 82%/1.5 Menlo, Consolas, monospace;
+}
+#chart--collapsed,
+#chart--expanded,
+#chart--function,
+#chart--gray,
+#chart--import,
+#chart--string:after,
+#chart--string:before {
+    color: var(--syntax_normal);
+}
+#chart--collapsed,
+#chart--inspect a {
+    cursor: pointer;
+}
+#chart--field {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+#chart--empty {
+    color: var(--syntax_comment);
+}
+#chart--blue,
+#chart--keyword {
+    color: #3182bd;
+}
+#chart--forbidden,
+#chart--pink {
+    color: #e377c2;
+}
+#chart--orange {
+    color: #e6550d;
+}
+#chart--boolean,
+#chart--null,
+#chart--undefined {
+    color: var(--syntax_atom);
+}
+#chart--bigint,
+#chart--date,
+#chart--green,
+#chart--number,
+#chart--regexp,
+#chart--symbol {
+    color: var(--syntax_number);
+}
+#chart--index,
+#chart--key {
+    color: var(--syntax_key);
+}
+#chart--prototype-key {
+    color: #aaa;
+}
+#chart--empty {
+    font-style: oblique;
+}
+#chart--purple,
+#chart--string {
+    color: var(--syntax_string);
+}
+#chart--error,
+#chart--red {
+    color: #e7040f;
+}
+#chart--inspect {
+    font: var(--mono_fonts);
+    overflow-x: auto;
+    display: block;
+    white-space: pre;
+}
+#chart--error #chart--inspect {
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.node--active {
+    cursor: pointer;
+    fill: red;
+}
+
+.label--active,
+.link-extension--active,
+.link--active {
+    fill: red;
+}
+#chart {
+    position: relative;
+}
+svg {
+    width: 932px;
+}
+
+body {
+    background: rgb(221, 221, 221);
+}
+
+.wrap {
+    position: absolute;
+    top: 273px;
+    left: 273px;
+    border-radius: 50%;
+    background: red;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-text {
+    width: 76px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+    border-top-right-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.text-indicator {
+    width: 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.text-centered {
+    top: 175px;
+    left: 175px;
+    justify-content: center;
+}
