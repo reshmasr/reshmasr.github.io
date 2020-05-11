@@ -97,6 +97,9 @@
 }
 #chart {
     position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 35px;
 }
 svg {
     width: 932px;
@@ -138,6 +141,7 @@ body {
     width: 10px;
     word-wrap: break-word;
     overflow: hidden;
+    overflow-wrap: break-word;
 }
 .text-centered {
     top: 175px;
