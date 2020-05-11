@@ -17,7 +17,7 @@ async function renderChart() {
         .style('overflow', 'visible');
 
     const data = await d3.json(
-        'http://localhost:8080/RadialGraph/transformation-data.json'
+        'https://reshmasr.github.io/D3Charts/transformation-data.json'
     );
 
     // const angle = 360 / data.nodes.length;
@@ -127,7 +127,7 @@ async function renderChart() {
         // .attr('text-anchor', (d) =>
         //     typeof d.id === typeof ''
         //         ? 'start'
-        //         : d.x < 0 && d.y < 0    
+        //         : d.x < 0 && d.y < 0
         //         ? 'end'
         //         : 'start'
         // )
