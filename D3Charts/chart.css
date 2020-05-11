@@ -112,7 +112,6 @@ body {
 .wrap {
     position: absolute;
     top: 273px;
-    left: 273px;
     border-radius: 50%;
     background: red;
     width: 150px;
@@ -135,6 +134,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 10px;
+    justify-content: center;
 }
 
 .text-indicator {
@@ -145,6 +145,5 @@ body {
 }
 .text-centered {
     top: 175px;
-    left: 175px;
     justify-content: center;
 }
